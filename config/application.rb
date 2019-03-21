@@ -29,5 +29,18 @@ module EcSample
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.generators do |g|
+      g.assets false
+      g.helper false
+      g.test_framework :rspec,
+        fixtures: true,
+        view_spacs: false,
+        helper_specs: false,
+        routing_specs: false,
+        controller_specs: true,
+        request_specs: false
+      g.fixture_replacement :factory_bot, dir: "spec/factories"
+    end
   end
 end
