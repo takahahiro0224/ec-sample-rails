@@ -1,0 +1,14 @@
+h1.text-center.mb-3
+  | 商品一覧
+
+.products-wrapper.container
+   .row
+    - @products.each do |pr|
+          .col-md-4.shadow-sm.mb-4.text-center id="prodcut_#{pr.id}"
+            h3
+             = pr.name
+            h4
+             = pr.price.format
+            div 
+             = pr.description
+

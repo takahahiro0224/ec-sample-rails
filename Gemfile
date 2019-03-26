@@ -36,6 +36,11 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'money-rails', '~>1.12'
+gem 'annotate'
+gem 'faker'
+gem 'slim-rails'
+gem 'bootstrap', '~> 4.1.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -56,6 +61,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'letter_opener'
   gem 'letter_opener_web'
+  gem 'html2slim'
 end
 
 
