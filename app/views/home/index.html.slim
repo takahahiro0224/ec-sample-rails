@@ -1,0 +1,13 @@
+h1.text-center
+  | 商品一覧
+
+div.products-wrapper
+    - @products.each do |pr|
+        div.card.shadow-sm.mb-4.text-center.sm.mx-auto id="prodcut_#{pr.id}"
+         h3
+          = pr.name
+         h4
+          = pr.price.format
+         div 
+          = pr.description
+
